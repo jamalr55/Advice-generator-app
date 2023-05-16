@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  font-size: 10px;
+}
+
+:root {
+  --light-cyan: #cee3e9;
+  --neon-green: #52ffa8;
+  --grayish-blue: #4e5d73;
+  --dark-grayishblue: #323a49;
+  --dark-blue: #1f2632;
+}
+
+.advice-quote {
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  letter-spacing: -0.0257143rem;
+  color: var(--light-cyan);
+}
+
+.advice-id {
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.3rem;
+  color: var(--neon-green);
+  text-transform: uppercase;
+}
+
+.button {
+  width: 6.4rem;
+  height: 6.4rem;
+  display: grid;
+  place-content: center;
+  background: var(--neon-green);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 40px #53ffaa;
+  transition: 0.4s;
+}
+
+body {
+  background-color: var(--dark-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin: 12rem auto;
+  padding: 4rem 2.4rem 6.4rem 2.4rem;
+  width: 34.3rem;
+  background: var(--dark-grayishblue);
+  box-shadow: 3rem 5rem 8rem rgba(0, 0, 0, 0.100202);
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.card_advice {
+  margin-top: 2.4rem;
+}
+
+.card_divider {
+  margin-top: 2.4rem;
+}
+
+.card_divider--desktop {
+  display: none;
+}
+
+.card_button {
+  position: absolute;
+  bottom: -3.2rem;
+  left: 14rem;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .card_button {
+    left: 23.8rem;
+  }
+
+  .card_divider--desktop {
+    display: block;
+    margin-top: 4rem;
+  }
+
+  .card_divider--mobile {
+    display: none;
+  }
+
+  .card_advice {
+    margin-top: 2.4rem;
+  }
+
+  .card {
+    padding: 4.8rem 4.8rem 7.2rem 4.8rem;
+    width: 54rem;
+  }
+
+  .advice-id {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.41rem;
+  }
+
+  .advice-quote {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.03rem;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--light-cyan);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
